@@ -5,7 +5,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/java/features"}, tags = {"@applicationForm"}, glue = {"stepDefinitions","support"})
+@CucumberOptions(features = {"src/test/java/features"}, tags = {"@aboutYou"}, glue = {"stepDefinitions","support"})
 
 public class TestRunner {
 }

@@ -1,7 +1,6 @@
 
-@applicationForm
 Feature: Home Insurance Enquiry form
-
+  @aboutYou
   Scenario Outline: Home Insurance About you section
     Given the user is on the policy enquiry page
     When the user's personal information such as "<Title>" "<FirstName>" "<LastName>" "<MaritalStatus>" "<Smoking>" is entered
@@ -11,7 +10,7 @@ Feature: Home Insurance Enquiry form
       | Title | FirstName | LastName  | MaritalStatus | Smoking |
       | mr    | Dinesh    | Mariathas | married       | No      |
 
-
+  @statementAboutYou
   Scenario Outline: Home Insurance Statement About you section
     Given the user is on the policy enquiry page
     When the user select statement option as "<AgreeOrDisagree>" "<businessPurpose>" "<bankrupt>" "<CourtJudgement>" "<renewalRefused>" "<HomeIncCancelled>" "<convicted>"
@@ -19,10 +18,11 @@ Feature: Home Insurance Enquiry form
 
     Examples:
       | AgreeOrDisagree | businessPurpose | bankrupt   | CourtJudgement | renewalRefused | HomeIncCancelled | convicted |
-      | I agree1        | I agree         | I disagree | I agree 1      | I agree        | I agree          | I agree   |
+      | I agree         | I agree         | I disagree | I agree 1      | I agree        | I agree          | I agree   |
 
 
     # Type of property can be house,flat_apartment,bungalow,other
+  @aboutYourProperty
   Scenario Outline: Home Insurance Statement About your property
     Given the user is on the policy enquiry page
     When the user enter the property information as "<address>" "<typeOfProperty>"
@@ -30,12 +30,13 @@ Feature: Home Insurance Enquiry form
 
     Examples:
       | address   | typeOfProperty |
-      | Greenford | house       |
+      | Greenford | house          |
       | Greenford | flat_apartment |
       | Greenford | bungalow       |
       | Greenford | other          |
 
 # GoCompareQuotes line is commented in the script in order to avoid too many qoute generation
+  @enquiryForm
   Scenario: Home Insurance Enquiry Form validation
     Given the user is on the policy enquiry page
     When the user enter the personal information, property information,Insurance history, Cover details
