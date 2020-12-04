@@ -48,11 +48,6 @@ public class Master {
 	}
 
 
-
-	public static void javaScriptExecutorClick(WebElement element) {
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-	}
-
 	public WebDriver getWebDriver() throws IOException {
 		String browserName=getConfigProperty("browser");
 		return getDriver(browserName);
@@ -78,13 +73,6 @@ public class Master {
 		return elementPresent;
 	}
 
-	public static void veryShortSleep() {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
 
 	public static void shortSleep() {
 		try {

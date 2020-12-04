@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,7 +12,7 @@ import static javaClasses.userInformation.*;
 public class MyStepdefs extends Master {
 
     @Given("^the user is on the policy enquiry page$")
-    public void theUserIsOnThePolicyEnquiryPage() throws InterruptedException {
+    public void theUserIsOnThePolicyEnquiryPage() {
         enquiryPage();
     }
 

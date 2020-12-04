@@ -1,3 +1,5 @@
+
+@applicationForm
 Feature: Home Insurance Enquiry form
 
   Scenario Outline: Home Insurance About you section
