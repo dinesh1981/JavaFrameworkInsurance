@@ -84,7 +84,10 @@ public class aboutProperty extends Master {
 
     public static void AboutTheCover(){
         driver.findElement(By.cssSelector("button[data-testid='today']")).click();
-        selectByMethod(driver.findElement(By.cssSelector("div[class='row question-row-please-select-what-t'] select"))).selectByIndex(1);
+        selectByMethod(driver.findElement(By.cssSelector("div[class='row question-row-please-select-what-t'] select"))).selectByIndex(2);
+        driver.findElement(By.cssSelector(p.getProperty("CurrentMarketValue"))).sendKeys("200000");
+        driver.findElement(By.cssSelector(p.getProperty("RebuildCost"))).sendKeys("185000");
+        driver.findElement(By.xpath(p.getProperty("BuildingDamage"))).click();
         selectByMethod(driver.findElement(By.cssSelector("div[class='row question-row-standard-excess-oth'] select"))).selectByIndex(1);
 
     }

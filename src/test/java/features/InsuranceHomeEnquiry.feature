@@ -17,7 +17,7 @@ Feature: Home Insurance Enquiry form
 
     Examples:
       | AgreeOrDisagree | businessPurpose | bankrupt   | CourtJudgement | renewalRefused | HomeIncCancelled | convicted |
-      | I agree        | I agree         | I disagree | I agree 1      | I agree        | I agree          | I agree   |
+      | I agree1        | I agree         | I disagree | I agree 1      | I agree        | I agree          | I agree   |
 
 
     # Type of property can be house,flat_apartment,bungalow,other
@@ -33,7 +33,7 @@ Feature: Home Insurance Enquiry form
       | Greenford | bungalow       |
       | Greenford | other          |
 
-
+# GoCompareQuotes line is commented in the script in order to avoid too many qoute generation
   Scenario: Home Insurance Enquiry Form validation
     Given the user is on the policy enquiry page
     When the user enter the personal information, property information,Insurance history, Cover details
