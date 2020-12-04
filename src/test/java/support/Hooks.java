@@ -15,7 +15,7 @@ public class Hooks extends Master {
 	}
 	@After
 	public void AfterRun() {
-		//new Master().closeBrowser();
+		new Master().closeBrowser();
 	}
 
 }
